@@ -1,21 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {View, Text, StyleSheet, StatusBar, ImageBackground} from 'react-native';
+import SplashScreen from "./src/screens/SplashScreen";
 
-export default function App() {
-  return (
+
+const bgImage = require("./assets/bgSplash.png")
+
+const App = () => {
+  return(
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      {/*<ImageBackground style={styles.image} source={bgImage}>*/}
+        <SplashScreen />
+      {/*</ImageBackground>*/}
+      <StatusBar  />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
+  // image: {
+  //   // flex: 1,
+  //   resizeMode: "cover",
+  //   // justifyContent: "center"
+  // },
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    paddingVertical: 40,
+    paddingHorizontal: 16,
+    backgroundColor: "linear-gradient(0deg, rgba(6, 29, 62, 0.65), rgba(6, 29, 62, 0.65))"
+    // backgroundImage: bgImage,
+  }
+})
+
+export default App;
