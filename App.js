@@ -1,16 +1,11 @@
 import React from 'react';
-import {View, Text, StyleSheet, StatusBar, ImageBackground} from 'react-native';
+import {View, StyleSheet, StatusBar} from 'react-native';
 import SplashScreen from "./src/screens/SplashScreen";
-
-
-const bgImage = require("./assets/bgSplash.png")
 
 const App = () => {
   return(
     <View style={styles.container}>
-      {/*<ImageBackground style={styles.image} source={bgImage}>*/}
-        <SplashScreen />
-      {/*</ImageBackground>*/}
+      <SplashScreen />
       <StatusBar  />
     </View>
   )
