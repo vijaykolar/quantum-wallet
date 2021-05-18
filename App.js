@@ -1,27 +1,23 @@
 import React from 'react';
 import {View, StyleSheet, StatusBar} from 'react-native';
-import SplashScreen from "./src/screens/SplashScreen";
+import GetStartedScreen from "./src/screens/GetStartedScreen";
+
 
 const App = () => {
   return(
     <View style={styles.container}>
-      <SplashScreen />
+      <GetStartedScreen />
       <StatusBar  />
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-  // image: {
-  //   // flex: 1,
-  //   resizeMode: "cover",
-  //   // justifyContent: "center"
-  // },
   container: {
-    paddingVertical: 40,
-    paddingHorizontal: 16,
+    paddingTop: 40,
+    // paddingHorizontal: 16,
+    paddingBottom: 0,
     backgroundColor: "linear-gradient(0deg, rgba(6, 29, 62, 0.65), rgba(6, 29, 62, 0.65))"
-    // backgroundImage: bgImage,
   }
 })
 
