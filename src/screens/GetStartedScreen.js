@@ -11,21 +11,21 @@ const GetStartedScreen = () => {
         <Image style={styles.logoImage} source={logo} />
       </View>
       <View style={styles.highlight}>
-        <Text style={styles.highlightMain}>Wellcome to Quantum Wallet</Text>
+        <Text style={styles.highlightMain}>Welcome to Quantum Wallet</Text>
         <Text style={styles.highlightInfo}>Keep your cards in one safe place. We can secure your information</Text>
       </View>
       <View style={styles.details}>
         <View style={styles.formItem}>
           <Text style={styles.label}>Username</Text>
-          <TextInput autoCapitalize="none" style={styles.input} placeholder="user name" />
+          <TextInput autoCapitalize="none" style={styles.input} placeholder="User name" />
         </View>
         <View style={styles.formItem}>
           <Text style={styles.label}>E-mail</Text>
-          <TextInput autoCapitalize="none" style={styles.input} placeholder="user name" />
+          <TextInput autoCapitalize="none" style={styles.input} placeholder="Email" />
         </View>
         <View style={styles.formItem}>
           <Text style={styles.label}>Phone number</Text>
-          <TextInput autoCapitalize="none" style={styles.input} placeholder="user name" />
+          <TextInput autoCapitalize="none" style={styles.input} placeholder="Mobile no." />
         </View>
         <View>
           <TouchableOpacity style={styles.getStarted}>
