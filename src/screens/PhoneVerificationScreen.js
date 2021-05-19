@@ -28,35 +28,35 @@ export default function PhoneVerificationScreen() {
               <TextInput
                 maxLength={1}
                 style={styles.passwordInput}
-                keyboardType="phone-pad"
+                keyboardType="number"
                 secureTextEntry={true}
               />
               <TextInput
-                keyboardType="phone-pad"
-                secureTextEntry={true}
-                maxLength={1}
-                style={styles.passwordInput}
-              />
-              <TextInput
-                keyboardType="phone-pad"
+                keyboardType="number"
                 secureTextEntry={true}
                 maxLength={1}
                 style={styles.passwordInput}
               />
               <TextInput
-                keyboardType="phone-pad"
+                keyboardType="number"
                 secureTextEntry={true}
                 maxLength={1}
                 style={styles.passwordInput}
               />
               <TextInput
-                keyboardType="phone-pad"
+                keyboardType="number"
                 secureTextEntry={true}
                 maxLength={1}
                 style={styles.passwordInput}
               />
               <TextInput
-                keyboardType="phone-pad"
+                keyboardType="number"
+                secureTextEntry={true}
+                maxLength={1}
+                style={styles.passwordInput}
+              />
+              <TextInput
+                keyboardType="number"
                 secureTextEntry={true}
                 maxLength={1}
                 style={styles.passwordInput}
