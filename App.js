@@ -4,7 +4,7 @@ import SplashScreen from "./src/screens/SplashScreen";
 // import GetStartedScreen from "./src/screens/GetStartedScreen";
 // import LoginScreen from "./src/screens/LoginScreen";
 // import PhoneVerificationScreen from "./src/screens/PhoneVerificationScreen";
-import VerificationSuccessScreen from "./src/screens/VerificationSuccessScreen";
+// import VerificationSuccessScreen from "./src/screens/VerificationSuccessScreen";
 
 const App = () => {
   return (
