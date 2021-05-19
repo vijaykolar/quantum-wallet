@@ -7,6 +7,8 @@ import {
   ImageBackground,
   TextInput,
   TouchableOpacity,
+  TouchableWithoutFeedback,
+  Keyboard,
 } from "react-native";
 
 const logo = require("../../assets/logo.png");
@@ -15,43 +17,47 @@ import Colors from "../../constants/colors";
 
 export default function LoginScreen() {
   return (
-    <View style={styles.container}>
-      <ImageBackground style={styles.image} source={image}>
-        <View style={styles.logoContainer}>
-          <Image style={styles.logo} source={logo} />
-          <View style={styles.textContainer}>
-            <Text style={styles.title}>Wellcome!</Text>
-            <Text style={styles.info}>
-              Please enter your phone number to continue
-            </Text>
-          </View>
-          <View style={styles.form}>
-            <View style={styles.inputContainer}>
-              <Text style={styles.inputLabel}>Phone number</Text>
-              <TextInput
-                autoCapitalize="none"
-                style={styles.inputText}
-                placeholder="Phone number"
-                keyboardType="phone-pad"
-                maxLength={10}
-              />
+    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+      <View style={styles.container}>
+        <ImageBackground style={styles.image} source={image}>
+          <View style={styles.logoContainer}>
+            <Image style={styles.logo} source={logo} />
+            <View style={styles.textContainer}>
+              <Text style={styles.title}>Wellcome!</Text>
+              <Text style={styles.info}>
+                Please enter your phone number to continue
+              </Text>
             </View>
-            <View style={styles.loginContainer}>
-              <TouchableOpacity style={styles.loginButton}>
-                <Text style={styles.loginButtonText}>Login</Text>
-              </TouchableOpacity>
-
-              <View style={styles.register}>
-                <Text style={styles.registerText}>Still have no accout? </Text>
-                <TouchableOpacity style={styles.registerButton}>
-                  <Text style={styles.registerButtonText}>Register</Text>
+            <View style={styles.form}>
+              <View style={styles.inputContainer}>
+                <Text style={styles.inputLabel}>Phone number</Text>
+                <TextInput
+                  autoCapitalize="none"
+                  style={styles.inputText}
+                  placeholder="Phone number"
+                  keyboardType="phone-pad"
+                  maxLength={10}
+                />
+              </View>
+              <View style={styles.loginContainer}>
+                <TouchableOpacity style={styles.loginButton}>
+                  <Text style={styles.loginButtonText}>Login</Text>
                 </TouchableOpacity>
+
+                <View style={styles.register}>
+                  <Text style={styles.registerText}>
+                    Still have no accout?{" "}
+                  </Text>
+                  <TouchableOpacity style={styles.registerButton}>
+                    <Text style={styles.registerButtonText}>Register</Text>
+                  </TouchableOpacity>
+                </View>
               </View>
             </View>
           </View>
-        </View>
-      </ImageBackground>
-    </View>
+        </ImageBackground>
+      </View>
+    </TouchableWithoutFeedback>
   );
 }
 
@@ -71,9 +77,10 @@ const styles = StyleSheet.create({
     marginHorizontal: 24,
   },
   textContainer: {
-    flex: 1,
+    // flex: 1,
     marginTop: 100,
     paddingHorizontal: 24,
+    marginBottom: 50,
   },
   title: {
     color: "#fff",

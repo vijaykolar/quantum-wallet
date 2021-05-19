@@ -1,11 +1,19 @@
 import React from "react";
 import { View, StyleSheet, StatusBar } from "react-native";
+import SplashScreen from "./src/screens/SplashScreen";
+// import GetStartedScreen from "./src/screens/GetStartedScreen";
+// import LoginScreen from "./src/screens/LoginScreen";
+// import PhoneVerificationScreen from "./src/screens/PhoneVerificationScreen";
 import VerificationSuccessScreen from "./src/screens/VerificationSuccessScreen";
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <VerificationSuccessScreen />
+      <SplashScreen />
+      {/* <GetStartedScreen /> */}
+      {/* <LoginScreen /> */}
+      {/* <PhoneVerificationScreen /> */}
+      {/* <VerificationSuccessScreen /> */}
       {/* <StatusBar color="#f1b" currentHeight={40} /> */}
     </View>
   );
@@ -17,8 +25,6 @@ const styles = StyleSheet.create({
     // paddingHorizontal: 16,
     // paddingBottom: 0,
     flex: 1,
-    backgroundColor:
-      "linear-gradient(0deg, rgba(6, 29, 62, 0.65), rgba(6, 29, 62, 0.65))",
   },
 });
 

@@ -7,6 +7,8 @@ import {
   ImageBackground,
   TextInput,
   TouchableOpacity,
+  TouchableWithoutFeedback,
+  Keyboard,
 } from "react-native";
 
 const logo = require("../../assets/logo.png");
@@ -14,70 +16,72 @@ const image = require("../../assets/bgSplash.png");
 
 export default function PhoneVerificationScreen() {
   return (
-    <View style={styles.container}>
-      <ImageBackground style={styles.image} source={image}>
-        <View style={styles.logoContainer}>
-          <Image style={styles.logo} source={logo} />
-          <View style={styles.textContainer}>
-            <Text style={styles.title}>Phone verification</Text>
-            <Text style={styles.info}>
-              We send verification code to your number:
-              <Text style={styles.phoneNumber}> +01 4227 242 6432</Text>
-            </Text>
-            <View style={styles.passwordContainer}>
-              <TextInput
-                maxLength={1}
-                style={styles.passwordInput}
-                keyboardType="number"
-                secureTextEntry={true}
-              />
-              <TextInput
-                keyboardType="number"
-                secureTextEntry={true}
-                maxLength={1}
-                style={styles.passwordInput}
-              />
-              <TextInput
-                keyboardType="number"
-                secureTextEntry={true}
-                maxLength={1}
-                style={styles.passwordInput}
-              />
-              <TextInput
-                keyboardType="number"
-                secureTextEntry={true}
-                maxLength={1}
-                style={styles.passwordInput}
-              />
-              <TextInput
-                keyboardType="number"
-                secureTextEntry={true}
-                maxLength={1}
-                style={styles.passwordInput}
-              />
-              <TextInput
-                keyboardType="number"
-                secureTextEntry={true}
-                maxLength={1}
-                style={styles.passwordInput}
-              />
+    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+      <View style={styles.container}>
+        <ImageBackground style={styles.image} source={image}>
+          <View style={styles.logoContainer}>
+            <Image style={styles.logo} source={logo} />
+            <View style={styles.textContainer}>
+              <Text style={styles.title}>Phone verification</Text>
+              <Text style={styles.info}>
+                We send verification code to your number:
+                <Text style={styles.phoneNumber}> +01 4227 242 6432</Text>
+              </Text>
+              <View style={styles.passwordContainer}>
+                <TextInput
+                  maxLength={1}
+                  style={styles.passwordInput}
+                  // keyboardType=""
+                  secureTextEntry={true}
+                />
+                <TextInput
+                  // keyboardType=""
+                  secureTextEntry={true}
+                  maxLength={1}
+                  style={styles.passwordInput}
+                />
+                <TextInput
+                  // keyboardType=""
+                  secureTextEntry={true}
+                  maxLength={1}
+                  style={styles.passwordInput}
+                />
+                <TextInput
+                  // keyboardType=""
+                  secureTextEntry={true}
+                  maxLength={1}
+                  style={styles.passwordInput}
+                />
+                <TextInput
+                  // keyboardType=""
+                  secureTextEntry={true}
+                  maxLength={1}
+                  style={styles.passwordInput}
+                />
+                <TextInput
+                  // keyboardType=""
+                  secureTextEntry={true}
+                  maxLength={1}
+                  style={styles.passwordInput}
+                />
+              </View>
+            </View>
+
+            <View style={styles.form}>
+              <View style={styles.loginContainer}>
+                <TouchableOpacity style={styles.loginButton}>
+                  <Text style={styles.loginButtonText}>Done</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.resendButton}>
+                  <Text style={styles.resendButtonText}>Resend Code</Text>
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
-
-          <View style={styles.form}>
-            <View style={styles.loginContainer}>
-              <TouchableOpacity style={styles.loginButton}>
-                <Text style={styles.loginButtonText}>Done</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity style={styles.resendButton}>
-                <Text style={styles.resendButtonText}>Resend Code</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-        </View>
-      </ImageBackground>
-    </View>
+        </ImageBackground>
+      </View>
+    </TouchableWithoutFeedback>
   );
 }
 
