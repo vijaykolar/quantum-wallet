@@ -11,6 +11,7 @@ import {
 
 const logo = require("../../assets/logo.png");
 const image = require("../../assets/bgSplash.png");
+import Colors from "../../constants/colors";
 
 export default function LoginScreen() {
   return (
@@ -117,7 +118,7 @@ const styles = StyleSheet.create({
     marginTop: 50,
   },
   loginButton: {
-    backgroundColor: "#5EA7FF",
+    backgroundColor: Colors.primary,
     borderRadius: 12,
     height: 54,
     alignItems: "center",
