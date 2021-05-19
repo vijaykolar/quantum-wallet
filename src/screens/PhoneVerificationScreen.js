@@ -1,62 +1,170 @@
 import React from "react";
 import {
-  Text,
   View,
+  Text,
   StyleSheet,
   Image,
-  TouchableOpacity,
+  ImageBackground,
   TextInput,
+  TouchableOpacity,
 } from "react-native";
 
 const logo = require("../../assets/logo.png");
+const image = require("../../assets/bgSplash.png");
 
-const PhoneVerificationScreen = () => {
+export default function PhoneVerificationScreen() {
   return (
     <View style={styles.container}>
-      <View style={styles.logoContainer}>
-        <Image style={styles.logoImage} source={logo} />
-      </View>
-      <View style={styles.highlight}>
-        <Text style={styles.highlightMain}>Phone verification</Text>
-        <Text style={styles.highlightInfo}>
-          We send verification code to your number:{" "}
-          <Text style={styles.phoneNumber}>+91-9980175653</Text>
-        </Text>
-      </View>
+      <ImageBackground style={styles.image} source={image}>
+        <View style={styles.logoContainer}>
+          <Image style={styles.logo} source={logo} />
+          <View style={styles.textContainer}>
+            <Text style={styles.title}>Phone verification</Text>
+            <Text style={styles.info}>
+              We send verification code to your number:
+              <Text style={styles.phoneNumber}> +01 4227 242 6432</Text>
+            </Text>
+            <View style={styles.passwordContainer}>
+              <TextInput
+                maxLength={1}
+                style={styles.passwordInput}
+                keyboardType="phone-pad"
+                secureTextEntry={true}
+              />
+              <TextInput
+                keyboardType="phone-pad"
+                secureTextEntry={true}
+                maxLength={1}
+                style={styles.passwordInput}
+              />
+              <TextInput
+                keyboardType="phone-pad"
+                secureTextEntry={true}
+                maxLength={1}
+                style={styles.passwordInput}
+              />
+              <TextInput
+                keyboardType="phone-pad"
+                secureTextEntry={true}
+                maxLength={1}
+                style={styles.passwordInput}
+              />
+              <TextInput
+                keyboardType="phone-pad"
+                secureTextEntry={true}
+                maxLength={1}
+                style={styles.passwordInput}
+              />
+              <TextInput
+                keyboardType="phone-pad"
+                secureTextEntry={true}
+                maxLength={1}
+                style={styles.passwordInput}
+              />
+            </View>
+          </View>
+
+          <View style={styles.form}>
+            <View style={styles.loginContainer}>
+              <TouchableOpacity style={styles.loginButton}>
+                <Text style={styles.loginButtonText}>Done</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity style={styles.resendButton}>
+                <Text style={styles.resendButtonText}>Resend Code</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+      </ImageBackground>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  image: {
+    flex: 1,
+  },
+
+  logoContainer: {
+    marginTop: 50,
+    flex: 1,
+  },
+  logo: {
+    marginHorizontal: 24,
+  },
+  textContainer: {
+    flex: 1,
+    marginTop: 40,
+    paddingHorizontal: 24,
+  },
+  title: {
+    color: "#fff",
+    fontSize: 22,
+    lineHeight: 26,
+    fontWeight: "600",
+  },
+  info: {
+    color: "rgba(255, 255, 255, .7)",
+    fontSize: 16,
+    marginTop: 16,
+    maxWidth: "80%",
+    lineHeight: 26,
+  },
   phoneNumber: {
     color: "#fff",
   },
-  highlightInfo: {
-    color: "rgba(255,255,255,0.7)",
-    lineHeight: 25,
+  passwordContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 20,
   },
-  highlightMain: {
-    fontSize: 22,
+  passwordInput: {
+    borderBottomWidth: 1,
+    borderColor: "#fff",
+    flex: 1,
+    marginHorizontal: 6,
     color: "#fff",
+    textAlign: "center",
+  },
+  form: {
+    backgroundColor: "#fff",
+    padding: 24,
+    flex: 1,
+    borderTopLeftRadius: 12,
+    borderTopRightRadius: 12,
+  },
+
+  loginContainer: {
+    marginTop: 50,
+  },
+  loginButton: {
+    backgroundColor: "#5EA7FF",
+    borderRadius: 12,
+    height: 54,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  loginButtonText: {
+    color: "#fff",
+    fontSize: 16,
     fontWeight: "600",
-    marginBottom: 10,
   },
-  highlight: {
-    marginTop: 60,
-    marginBottom: 40,
-    marginHorizontal: 16,
-    // flex: 1,
+  resendButton: {
+    borderColor: "#5EA7FF",
+    borderWidth: 1,
+    borderRadius: 12,
+    height: 54,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 16,
   },
-  logoImage: {
-    marginHorizontal: "auto",
-  },
-  logoContainer: {
-    marginTop: 30,
-    marginHorizontal: 16,
-  },
-  container: {
-    alignSelf: "center",
+  resendButtonText: {
+    color: "#5EA7FF",
+    fontSize: 16,
+    fontWeight: "600",
   },
 });
-
-export default PhoneVerificationScreen;

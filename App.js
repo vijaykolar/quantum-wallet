@@ -1,11 +1,11 @@
 import React from "react";
 import { View, StyleSheet, StatusBar } from "react-native";
-import LoginScreen from "./src/screens/LoginScreen";
+import PhoneVerificationScreen from "./src/screens/PhoneVerificationScreen";
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <LoginScreen />
+      <PhoneVerificationScreen />
       {/* <StatusBar color="#f1b" currentHeight={40} /> */}
     </View>
   );
