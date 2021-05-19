@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 16,
     fontWeight: "600",
-    fontFamily: "Lato_400Regular"
+
   },
   login: {
     backgroundColor: "rgba(255, 255, 255, 0.2);",
